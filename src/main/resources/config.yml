@@ -1,0 +1,39 @@
+# GfishBank 插件配置文件
+
+# 利息设置
+interest:
+  # 利息间隔时间（毫秒），默认24小时
+  interval: 86400000
+  # 利息率（小数），默认1%
+  rate: 0.01
+  # 是否启用利息系统
+  enabled: true
+
+# 数据库设置
+database:
+  # 数据库类型，目前仅支持h2
+  type: "h2"
+  # 数据库文件路径（相对于插件数据文件夹）
+  path: "bank"
+
+# 消息设置
+messages:
+  # 前缀
+  prefix: "&7[&bGfishBank&7] &r"
+  # 成功消息
+  success: "&a成功！"
+  # 错误消息
+  error: "&c错误！"
+  # 余额消息格式
+  balance: "&a你的银行余额: %.2f 金币"
+  # 存款消息格式
+  deposit: "&a成功存入 %.2f 金币到银行！"
+  # 取款消息格式
+  withdraw: "&a成功从银行取出 %.2f 金币！"
+  # 利息消息格式
+  interest: "&a你获得了 %.2f 金币的银行利息！"
+
+# 命令别名设置
+commands:
+  # 是否启用中文命令
+  enableChinese: true

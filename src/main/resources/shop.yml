@@ -1,0 +1,33 @@
+# GFish商店配置文件
+# 格式:
+# 商品名称:
+#   变量: %变量名% (如 %bank%)
+#   购买数字: 所需的变量值
+#   执行命令:
+#     - "命令1"
+#     - "命令2"
+
+# 示例商品
+钻石剑:
+  变量: %bank%
+  购买数字: 100
+  执行命令:
+    - "give %player% diamond_sword 1"
+    - "tell %player% 你购买了一把钻石剑！"
+
+钻石套装:
+  变量: %bank%
+  购买数字: 500
+  执行命令:
+    - "give %player% diamond_helmet 1"
+    - "give %player% diamond_chestplate 1"
+    - "give %player% diamond_leggings 1"
+    - "give %player% diamond_boots 1"
+    - "tell %player% 你购买了一套钻石装备！"
+
+飞行权限:
+  变量: %bank%
+  购买数字: 200
+  执行命令:
+    - "pex user %player% add essentials.fly"
+    - "tell %player% 你购买了飞行权限！"
