@@ -39,7 +39,7 @@ jobs:
     - name: 上传构建产物
       uses: actions/upload-artifact@v4
       with:
-        name: zcshop-plugin
+        name: gfishbank-plugin
         path: target/*.jar
         retention-days: 30
 
@@ -55,7 +55,7 @@ jobs:
     - name: 下载构建产物
       uses: actions/download-artifact@v3
       with:
-        name: zcshop-plugin
+        name: gfishbank-plugin
         path: target
 
     - name: 创建GitHub Release
@@ -64,4 +64,4 @@ jobs:
         files: target/*.jar
         generate_release_notes: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN
