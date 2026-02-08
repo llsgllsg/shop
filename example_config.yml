@@ -1,0 +1,49 @@
+# ZCShop 示例配置文件
+# 将此文件重命名为 config.yml 并放入 plugins/ZCShop/ 目录
+
+# 基础商品示例
+钻石:
+  变量: "%bank%"
+  购买数字: 100
+  超过执行的命令: "give %player% diamond 1"
+
+铁剑:
+  变量: "%bank%"
+  购买数字: 50
+  超过执行的命令: "give %player% iron_sword 1"
+
+金苹果:
+  变量: "%bank%"
+  购买数字: 200
+  超过执行的命令: "give %player% golden_apple 1"
+
+# 权限相关商品
+飞行权限:
+  变量: "%bank%"
+  购买数字: 500
+  超过执行的命令: "lp user %player% permission set essentials.fly true"
+
+# 计分板变量示例
+# 假设你有一个名为 "points" 的计分板目标
+特殊奖励:
+  变量: "%scoreboard:points%"
+  购买数字: 1000
+  超过执行的命令: "give %player% nether_star 1"
+
+# 多命令示例（使用分号分隔）
+新手礼包:
+  变量: "%bank%"
+  购买数字: 1000
+  超过执行的命令: "give %player% diamond 10;give %player% iron_ingot 32;give %player% bread 16"
+
+# 传送相关
+回家券:
+  变量: "%bank%"
+  购买数字: 50
+  超过执行的命令: "tp %player% %player%:home"
+
+# 注意事项：
+# 1. %bank% 变量需要Vault插件支持
+# 2. %scoreboard:xxx% 格式支持计分板变量
+# 3. %player% 会被自动替换为玩家名称
+# 4. 命令将以控制台权限执行
